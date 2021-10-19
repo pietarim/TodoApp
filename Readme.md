@@ -4,7 +4,7 @@
 
 Avaa sijainti /server
 
-Suorita:
+Suoritaaa:
 
 `npm install`
 
