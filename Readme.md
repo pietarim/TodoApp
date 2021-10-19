@@ -2,9 +2,9 @@
 
 ## Localhostilla suoritus
 
-Avaa sijainti /tehtavaLista
+Avaa sijainti /server
 
-Lisää env. tiedosto sijaintiin /tehtavaLista ja täydennä muuttujiin käyttämäsi arvot:
+Lisää env. tiedosto sijaintiin /server ja täydennä muuttujiin käyttämäsi arvot:
 
 ```
 SALAUS= esimerkiksiTamaTeksti
@@ -16,9 +16,9 @@ Kaynnista backend:
 
 `npm start`
 
-Avaa sijainti /tehtavalistaFront
+Avaa sijainti /client
 
-Lisää config.js sijaintiin tehtavalistaFront/src/config
+Lisää config.js sijaintiin client/src/config
 
 Kirjoita config.js sisään:
 
@@ -26,7 +26,7 @@ Kirjoita config.js sisään:
 export const url = "http://localhost:*backendin_kayttama_portti*"
 ```
 
-avaa sijainti tehtavalistaFront
+avaa sijainti client
 
 käynnistä sovellus:
 
@@ -74,7 +74,7 @@ Muokkaa ngingx config server_names_hash_bucket_size kohta seuraavaksi:
 
 ## Front toimintakuntoon
 
-Lisää config.js sijaintiin tehtavalistaFront/src/config
+Lisää config.js sijaintiin client/src/config
 
 Kirjoita config.js sisään:
 
@@ -82,7 +82,7 @@ Kirjoita config.js sisään:
 export const url = "https://sinun_domain"
 ```
 
-Avaa sijainti /tehtavalistaFront
+Avaa sijainti /client
 
 suorita build:
 
@@ -110,7 +110,7 @@ Luo sinun_domain:
 
 `cd /etc/nginx/sites-available`
 
-`sudo nano sinun-domain`
+`sudo nano sinun_domain`
 
 kirjoita seuraava tiedostoon:
 

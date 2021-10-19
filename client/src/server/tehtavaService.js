@@ -10,11 +10,6 @@ export const setToken = newToken => {
 
 export const muokkaa = async (muokattu) => {
     const id = muokattu._id
-/*     const lahetettava = {
-        otsikko: muokattu.otsikko,
-        kuvaus: muokattu.kuvaus,
-        tekija: muokattu.tekija
-    } */
     await axios.put(`${url}/api/tehtavat/${id}`, muokattu)
 }
 
@@ -34,5 +29,3 @@ export const poista = async (id) => {
     const poistettu = await axios.delete(`${url}/api/tehtavat/${id}`, config)
     poistettu.then(console.log('poistettu'))
 }
-
-/* export default { muokkaa, poista, lisaa, setToken } */

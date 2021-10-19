@@ -1,19 +1,23 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+/server/node_modules
+/server/.env
+/client/node_modules
+/client/src/config
 /.pnp
 .pnp.js
-/node_modules
 
 # testing
 /coverage
+/request
 
 # production
 /build
 /src/config.js
 
 # misc
+.env
 .DS_Store
 .env.local
 .env.development.local

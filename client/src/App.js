@@ -1,4 +1,3 @@
-/* import './App.css'; */
 import SisaankirjautumisLomake from './components/SisaankirjautumisLomake'
 import { poista, setToken } from './server/tehtavaService'
 import TehtavaSivu from './components/tehtava/TehtavaSivu'
@@ -8,6 +7,7 @@ import axios from 'axios'
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import { url } from './config'
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
@@ -18,7 +18,7 @@ function App() {
 
   const [tehtava, setTehtava] = useState([])
   
-  const handleChange = (event, newValue) => {
+  const handleChange = (newValue) => {
     setValue(newValue);
   };
   
@@ -45,7 +45,7 @@ function App() {
   }
 
   useEffect(() => {
-    const request = axios.get('https://pietarimurtomaki.com/api/tehtavat')
+    const request = axios.get(`${url}/api/tehtavat`)
     request.then(response => setTehtava(response.data))
   }, [])
   useEffect(() => {
@@ -85,7 +85,13 @@ function App() {
       </Paper>
       <Switch>
         
-        <Route exact path="/" render={() => (<TehtavaSivu muokkaaState={muokkaaState} tehtavaPoistaminenKasittelija={tehtavaPoistaminenKasittelija} tehtavat={tehtava} kayttaja={kayttaja.nimi} />)} />
+        <Route exact path="/" render={() => (
+          <TehtavaSivu 
+            muokkaaState={muokkaaState} 
+            tehtavaPoistaminenKasittelija={tehtavaPoistaminenKasittelija} 
+            tehtavat={tehtava} 
+            kayttaja={kayttaja.nimi} />)} 
+          />
         <Route path="/lomake" render={() => (< TehtavaLomake tehtava={tehtava} setTehtava={setTehtava} />)} /> 
       </Switch>
       
