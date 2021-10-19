@@ -4,6 +4,10 @@
 
 Avaa sijainti /server
 
+Suorita:
+
+`npm install`
+
 Lisää env. tiedosto sijaintiin /server ja täydennä muuttujiin käyttämäsi arvot:
 
 ```
@@ -17,6 +21,10 @@ Kaynnista backend:
 `npm start`
 
 Avaa sijainti /client
+
+Suorita:
+
+`npm install`
 
 Lisää config.js sijaintiin client/src/config
 
