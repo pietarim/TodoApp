@@ -4,9 +4,7 @@
 
 Avaa sijainti /server
 
-Suoritaaa:
-
-`npm install`
+Suorita: `npm install`
 
 Lisää env. tiedosto sijaintiin /server ja täydennä muuttujiin käyttämäsi arvot:
 
@@ -20,21 +18,15 @@ Kaynnista backend:
 
 `npm start`
 
-Avaa sijainti /client
+Avaa sijainti `/client` ja Suorita: `npm install`
 
-Suorita:
+Lisää `config.js` sijaintiin client/src/config
 
-`npm install`
-
-Lisää config.js sijaintiin client/src/config
-
-Kirjoita config.js sisään:
+Kirjoita `config.js` sisään:
 
 ```
 export const url = "http://localhost:*backendin_kayttama_portti*"
 ```
-
-avaa sijainti client
 
 käynnistä sovellus:
 
@@ -82,17 +74,19 @@ Muokkaa ngingx config server_names_hash_bucket_size kohta seuraavaksi:
 
 ## Front toimintakuntoon
 
-Lisää config.js sijaintiin client/src/config
+Lisää `config.js` sijaintiin `client/src/config`
 
-Kirjoita config.js sisään:
+Kirjoita `config.js` sisään:
 
 ```
 export const url = "https://sinun_domain"
 ```
 
-Avaa sijainti /client
+Avaa sijainti `/client`
 
-suorita build:
+Suorita seuraavat komennot:
+
+`npm install`
 
 `npm build`
 
@@ -102,11 +96,11 @@ Siirrä /build sisällä olevat tiedostot ubuntu serverille sijaintiin:
 
 `var/www/sinun_domain/html`
 
-Siirrä /tehtavaLista ubuntu serverille sijaintiin:
+Siirrä /server ubuntu serverille sijaintiin, esimerkissä kansion nimi on vaihdettu todoApp:
 
-`ubuntu_kayttajanimi/tehtavaLista`
+`ubuntu_kayttajanimi/todoApp`
 
-Lisää env. tiedosto /tehtavaLista juureen ja täydennä muuttujiin käyttämäsi arvot:
+Lisää env. tiedosto /server juureen ja täydennä muuttujiin käyttämäsi arvot:
 
 ```
 SALAUS= *esimerkiksiTamaTeksti*
@@ -156,7 +150,7 @@ uudelleenkäynnistä Nginx:
 
 Käynnistä sovelluksen back end PM2:lla:
 
-`cd /ubuntu_kayttajanimi/tehtavaLista`
+`cd /ubuntu_kayttajanimi/todoApp`
 
 `sudo pm2 start index.js`
 
