@@ -7,14 +7,14 @@
 /client/src/config.js
 /.pnp
 .pnp.js
-/server/build
+# /server/build
 
 # testing
 /coverage
 /request
 
 # production
-/build
+/client/build
 /src/config.js
 
 # misc
